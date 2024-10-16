@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Île-de-France', code: '11' },
         { name: 'Auvergne-Rhône-Alpes', code: '84' },
         { name: 'Corse', code: '94' },
+        { name: 'Hauts-de-France', code: '32' }, 
         // Ajoute toutes les régions ici
     ];
 
