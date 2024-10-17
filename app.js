@@ -4,6 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Auvergne-Rhône-Alpes', code: '84' },
         { name: 'Corse', code: '94' },
         { name: 'Hauts-de-France', code: '32' },
+        { name: 'Grand Est', code: '44' },
+        { name: 'Nouvelle-Aquitaine', code: '75' },
+        { name: 'Pays de la Loire', code: '52' },
+        { name: 'Occitanie', code: '76' },
+        { name: 'Bretagne', code: '53' },
+        { name: 'Provenance-Alpes-Côte d Azur', code: '93' },
+        { name: 'Normandie', code: '28' },
+        { name: 'Centre-Val de Loire', code: '24' },
+        { name: 'DROM-DROM', code: 'pas de code' },
+        { name: 'ETR - Etranger', code: 'pas de code' },
+        { name: 'COM - COM', code: 'pas de code' },
+        { name: 'Monaco', code: '980' },
+        { name: 'Toutes', code: '0' },
         // Ajoute toutes les régions ici
     ];
 
