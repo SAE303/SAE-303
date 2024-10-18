@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Stockage des données par région et fédération
     const regionData = {
         '11': {
             labels: ['Football', 'Tennis', 'Équitation', 'Golf', 'Judo, Jujitsu, Kendo et Disciplines Associées', 'Gymnastique', 'Basketball', 'Éducation Physique et de Gymnastique Volontaire', 'Natation'],
