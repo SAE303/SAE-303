@@ -108,9 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Provenance-Alpes-Côte d Azur', code: '93' },
         { name: 'Normandie', code: '28' },
         { name: 'Centre-Val de Loire', code: '24' },
-        { name: 'DROM-DROM', code: 'DROM' },
-        { name: 'ETR - Etranger', code: 'ETR' },
-        { name: 'COM - COM', code: 'COM' },
+        { name: 'DROM', code: 'DROM' },
+        { name: 'Étranger', code: 'ETR' },
+        { name: 'COM', code: 'COM' },
         { name: 'Monaco', code: '980' },
         
     ];
@@ -200,6 +200,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    // Charger les données de la première région par défaut
     loadRegionData('0');
 });
