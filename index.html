@@ -4,25 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualisation des Licenciés par Région</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script/app.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
     <div class="flex">
-        <!-- Sidebar for region selection -->
         <div class="w-1/4 p-4 bg-white shadow-lg">
             <h2 class="text-lg font-bold mb-4">Sélectionnez une région</h2>
             <ul id="region-list" class="space-y-2">
-                <!-- Regions will be loaded here dynamically -->
             </ul>
         </div>
-
-        <!-- Main content for the chart -->
-        <div class="w-3/4 p-8">
+        <div class="w-3/4 p-2">
             <canvas id="licenciesChart" width="400" height="200"></canvas>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="app.js"></script>
 </body>
 </html>
