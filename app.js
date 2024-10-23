@@ -82,19 +82,18 @@ document.addEventListener('DOMContentLoaded', () => {
             femmes: [1143, 1994, 0, 820, 3414, 0, 1051]
         },
         '980': {
-            labels: ['Football', 'Tennis', 'Équitation', 'Golf', 'Gymnastique', 'Rygby', 'Voile'],
+            labels: ['Football', 'Tennis', 'Équitation', 'Golf', 'Gymnastique', 'Rugby', 'Voile'],
             hommes: [423, 1728, 0, 753, 0, 381, 219],
             femmes: [0, 1027, 288, 368, 344, 0, 113]
         },
         '0': {
-            labels: ['Football', 'Tennis', 'Équitation', 'Golf', 'Judo, Jujitsu, Kendo et Disciplines Associées', 'Gymnastique', 'Basketball', 'Éducation Physique et de Gymnastique Volontaire', 'Natation', 'Rygby', 'Handball', 'Tir', 'Pétanque et Jeu Provençal', 'Voile', 'Sport Pour Tous', 'Clubs Alpins et de Montagne', 'Ski', 'Études et Sport Sous-Marin'],
+            labels: ['Football', 'Tennis', 'Équitation', 'Golf', 'Judo, Jujitsu, Kendo et Disciplines Associées', 'Gymnastique', 'Basketball', 'Éducation Physique et de Gymnastique Volontaire', 'Natation', 'Rugby', 'Handball', 'Tir', 'Pétanque et Jeu Provençal', 'Voile', 'Sport Pour Tous', 'Clubs Alpins et de Montagne', 'Ski', 'Études et Sport Sous-Marin'],
             hommes: [2215848, 1106989, 675186, 163886, 250741, 246244, 351564, 594408, 84388, 187916, 531864, 63116, 50663, 73793, 18382, 2006, 1159, 4431],
             femmes: [2215848, 1106989, 675186, 163886, 250741, 246244, 351564, 594408, 84388, 187916, 531864, 63116, 50663, 73793, 18382, 2006, 1159, 4431]
         },
     };
 
     const regions = [
-        { name: 'France', code: '0' },
         { name: 'Île-de-France', code: '11' },
         { name: 'Auvergne-Rhône-Alpes', code: '84' },
         { name: 'Corse', code: '94' },
@@ -104,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Pays de la Loire', code: '52' },
         { name: 'Occitanie', code: '76' },
         { name: 'Bretagne', code: '53' },
-        { name: 'Provenance-Alpes-Côte d Azur', code: '93' },
+        { name: 'Provenance-Alpes-Côte d-Azur', code: '93' },
         { name: 'Normandie', code: '28' },
         { name: 'Centre-Val de Loire', code: '24' },
         { name: 'DROM', code: 'DROM' },
@@ -113,8 +112,23 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Monaco', code: '980' },
         
     ];
-
     const regionList = document.getElementById('region-list');
+    const franceOption = document.createElement('li');
+    franceOption.textContent = 'France';
+    franceOption.className = "cursor-pointer text-blue-500 hover:text-blue-700";
+
+    const franceImage = document.createElement('img');
+    franceImage.src = 'img/téléchargé.png';
+    franceImage.alt = 'France';
+    franceImage.style.height = '40px';
+    franceImage.style.marginRight = '16px';
+
+    franceOption.addEventListener('click', () => loadRegionData('0'));
+
+    franceOption.prepend(franceImage);
+
+    regionList.insertBefore(franceOption, regionList.firstChild);
+
     regions.forEach(region => {
         const listItem = document.createElement('li');
         listItem.textContent = region.name;
@@ -148,14 +162,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     label: 'Hommes',
                     data: dataForRegion.hommes,
                     borderColor: 'rgba(75, 192, 192, 1)',
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    backgroundColor: 'rgba(75, 192, 192, 1)',
                     fill: false,
                 },
                 {
                     label: 'Femmes',
                     data: dataForRegion.femmes,
                     borderColor: 'rgba(255, 99, 132, 1)',
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    backgroundColor: 'rgba(255, 99, 132, 1)',
                     fill: false,
                 },
             ]
@@ -182,17 +196,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 scales: {
                     x: {
+                        ticks: {
+                            color: 'black',
+                            font: {
+                                weight: 'bold',
+                            }
+                        },
                         display: true,
                         title: {
                             display: true,
-                            text: 'Fédération'
+                            text: 'Fédération',
+                            color: 'black',
+                            font: {
+                                size: 32,
+                                weight: 'bold',
+                            }
                         }
                     },
                     y: {
+                        ticks: {
+                            color: 'black',
+                            font: {
+                                weight: 'bold',
+                            }
+                        },
                         display: true,
                         title: {
                             display: true,
-                            text: 'Nombre de licenciés'
+                            text: 'Nombre de licenciés',
+                            color: 'black',
+                            font: {
+                                size: 32,
+                                weight: 'bold',
+                            }
                         }
                     }
                 }
