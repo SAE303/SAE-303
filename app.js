@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     franceOption.className = "cursor-pointer text-blue-500 hover:text-blue-700";
 
     const franceImage = document.createElement('img');
-    franceImage.src = 'img/téléchargé.png';
+    franceImage.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAACFCAMAAAApQEceAAAAFVBMVEX///8AI5XtKTkAFJJ6gbrzg4ntHDCiuGlCAAAAiUlEQVR4nO3PRxEAIAADsDL9S0ZEf1ziIBmttVM7d7YiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiLyaeQBbt9uqjGyZV0AAAAASUVORK5CYII=';
     franceImage.alt = 'France';
     franceImage.style.height = '40px';
     franceImage.style.marginRight = '16px';
