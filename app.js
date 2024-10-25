@@ -115,13 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const regionList = document.getElementById('region-list');
     const franceOption = document.createElement('li');
     franceOption.textContent = 'France';
-    franceOption.className = "cursor-pointer font-bold text-black hover:text-blue-700";
+    franceOption.className = "cursor-pointer text-2xl font-bold text-black hover:text-blue-700";
 
     const franceImage = document.createElement('img');
     franceImage.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAACWCAMAAAAfSh8xAAAAD1BMVEXOESb///8AJlR/kqnzxMlwvJaeAAAApUlEQVR4nO3PQREAIAgAMAT6ZzYEeOdja7DIuTpbOh4wNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0/GJ4AUOofWVeGcMdAAAAAElFTkSuQmCC';
     franceImage.alt = 'France';
-    franceImage.style.height = '40px';
-    franceImage.style.marginRight = '16px';
+    franceImage.style.height = '60px';
+    franceImage.style.marginRight = '20px';
 
     franceOption.addEventListener('click', () => loadRegionData('0'));
 
