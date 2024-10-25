@@ -115,10 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const regionList = document.getElementById('region-list');
     const franceOption = document.createElement('li');
     franceOption.textContent = 'France';
-    franceOption.className = "cursor-pointer text-blue-500 hover:text-blue-700";
+    franceOption.className = "cursor-pointer font-bold text-black hover:text-blue-700";
 
     const franceImage = document.createElement('img');
-    franceImage.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAACFCAMAAAApQEceAAAAFVBMVEX///8AI5XtKTkAFJJ6gbrzg4ntHDCiuGlCAAAAiUlEQVR4nO3PRxEAIAADsDL9S0ZEf1ziIBmttVM7d7YiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiLyaeQBbt9uqjGyZV0AAAAASUVORK5CYII=';
+    franceImage.src = 'img/téléchargé.png';
     franceImage.alt = 'France';
     franceImage.style.height = '40px';
     franceImage.style.marginRight = '16px';
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     regions.forEach(region => {
         const listItem = document.createElement('li');
         listItem.textContent = region.name;
-        listItem.className = "cursor-pointer text-blue-500 hover:text-blue-700";
+        listItem.className = "cursor-pointer font-bold text-black hover:text-blue-700";
         listItem.addEventListener('click', () => loadRegionData(region.code));
         regionList.appendChild(listItem);
     });
@@ -200,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             color: 'black',
                             font: {
                                 weight: 'bold',
+                                size: '16px',
                             }
                         },
                         display: true,
@@ -218,6 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             color: 'black',
                             font: {
                                 weight: 'bold',
+                                size: '16px',
                             }
                         },
                         display: true,
