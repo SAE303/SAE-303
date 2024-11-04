@@ -172,7 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     backgroundColor: 'rgba(255, 99, 132, 1)',
                     fill: false,
                 },
-                5416498
             ]
         };
 
