@@ -88,8 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         '0': {
             labels: ['Football', 'Tennis', 'Équitation', 'Golf', 'Judo, Jujitsu, Kendo et Disciplines Associées', 'Gymnastique', 'Basketball', 'Éducation Physique et de Gymnastique Volontaire', 'Natation', 'Rugby', 'Handball', 'Tir', 'Pétanque et Jeu Provençal', 'Voile', 'Sport Pour Tous', 'Clubs Alpins et de Montagne', 'Ski', 'Études et Sport Sous-Marin'],
-            total: [2215848, 1106989, 675186, 163886, 250741, 246244, 351564, 594408, 84388, 187916, 531864, 63116, 50663, 73793, 18382, 2006, 1159, 4431],
-    }};
+            hommes: [2215848, 1106989, 675186, 163886, 250741, 246244, 351564, 594408, 84388, 187916, 531864, 63116, 50663, 73793, 18382, 2006, 1159, 4431],
+            femmes: [2215848, 1106989, 675186, 163886, 250741, 246244, 351564, 594408, 84388, 187916, 531864, 63116, 50663, 73793, 18382, 2006, 1159, 4431]
+        },
+    };
 
     const regions = [
         { name: 'Île-de-France', code: '11' },
@@ -166,13 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     label: 'Femmes',
                     data: dataForRegion.femmes,
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    backgroundColor: 'rgba(255, 99, 132, 1)',
-                    fill: false,
-                },
-                {
-                    label: 'Total',
-                    data: dataForRegion.total,
                     borderColor: 'rgba(255, 99, 132, 1)',
                     backgroundColor: 'rgba(255, 99, 132, 1)',
                     fill: false,
