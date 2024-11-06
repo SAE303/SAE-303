@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     franceOption.className = "cursor-pointer text-2xl font-bold text-black hover:text-blue-700";
 
     const franceImage = document.createElement('img');
-    franceImage.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAACWCAMAAAAfSh8xAAAAD1BMVEXOESb///8AJlR/kqnzxMlwvJaeAAAApUlEQVR4nO3PQREAIAgAMAT6ZzYEeOdja7DIuTpbOh4wNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0/GJ4AUOofWVeGcMdAAAAAElFTkSuQmCC';
+    franceImage.src = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Ffr%2Fsearch%3Fk%3D%2522drapeau%2Bfran%25C3%25A7ais%2522&psig=AOvVaw0qv4zEUzSK14WEvxFPkktO&ust=1730966737480000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMDmid6fx4kDFQAAAAAdAAAAABAE';
     franceImage.alt = 'France';
     franceImage.style.height = '60px';
     franceImage.style.marginRight = '20px';
