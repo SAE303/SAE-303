@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     franceOption.className = "cursor-pointer text-2xl font-bold text-black hover:text-blue-700";
 
     const franceImage = document.createElement('img');
-    franceImage.src = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Ffr%2Fsearch%3Fk%3D%2522drapeau%2Bfran%25C3%25A7ais%2522&psig=AOvVaw0qv4zEUzSK14WEvxFPkktO&ust=1730966737480000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMDmid6fx4kDFQAAAAAdAAAAABAE';
+    franceImage.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAACWCAMAAAAfSh8xAAAAD1BMVEXOESb///8AJlR/kqnzxMlwvJaeAAAApUlEQVR4nO3PQREAIAgAMAT6ZzYEeOdja7DIuTpbOh4wNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0/GJ4AUOofWVeGcMdAAAAAElFTkSuQmCC';
     franceImage.alt = 'France';
     franceImage.style.height = '60px';
     franceImage.style.marginRight = '20px';
@@ -136,14 +136,83 @@ document.addEventListener('DOMContentLoaded', () => {
         regionList.appendChild(listItem);
     });
 
-    const ctx = document.getElementById('licenciesChart').getContext('2d');
-    let chart;
-
-    (async() => {
-        const requete = await fetch("geo-top-5-sports-avec-plus-licencies-par-region-2023-france.geojson")
-        const reponse = await requete.json()
-        console.log(reponse)
-    })()
+    const options = {
+        colors: ["#1A56DB", "#FDBA8C", "#28A745"],
+        series: [],
+        chart: {
+            type: "bar",
+            height: "320px",
+            fontFamily: "Inter, sans-serif",
+            toolbar: {
+                show: false,
+            },
+        },
+        plotOptions: {
+            bar: {
+                horizontal: false,
+                columnWidth: "70%",
+                borderRadiusApplication: "end",
+                borderRadius: 8,
+            },
+        },
+        tooltip: {
+            shared: true,
+            intersect: false,
+            style: {
+                fontFamily: "Inter, sans-serif",
+            },
+        },
+        states: {
+            hover: {
+                filter: {
+                    type: "darken",
+                    value: 1,
+                },
+            },
+        },
+        stroke: {
+            show: true,
+            width: 0,
+            colors: ["transparent"],
+        },
+        grid: {
+            show: false,
+            strokeDashArray: 4,
+            padding: {
+                left: 2,
+                right: 2,
+                top: -14
+            },
+        },
+        dataLabels: {
+            enabled: false,
+        },
+        legend: {
+            show: false,
+        },
+        xaxis: {
+            floating: false,
+            labels: {
+                show: true,
+                style: {
+                    fontFamily: "Inter, sans-serif",
+                    cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
+                }
+            },
+            axisBorder: {
+                show: false,
+            },
+            axisTicks: {
+                show: false,
+            },
+        },
+        yaxis: {
+            show: false,
+        },
+        fill: {
+            opacity: 1,
+        },
+    };
 
     function loadRegionData(regionCode) {
         const dataForRegion = regionData[regionCode];
@@ -154,91 +223,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const totalLicencies = dataForRegion.hommes.reduce((a, b) => a + b, 0) + dataForRegion.femmes.reduce((a, b) => a + b, 0);
+        const totalLicenciesArray = dataForRegion.hommes.map((value, index) => value + dataForRegion.femmes[index]);
         
         const totalDiv = document.getElementById('totalLicencies');
         totalDiv.textContent = `Total Licenciés: ${totalLicencies}`;
         
-        const data = {
-            labels: dataForRegion.labels,
-            datasets: [
-                {
-                    label: 'Hommes',
-                    data: dataForRegion.hommes,
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    backgroundColor: 'rgba(75, 192, 192, 1)',
-                    fill: false,
-                },
-                {
-                    label: 'Femmes',
-                    data: dataForRegion.femmes,
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    backgroundColor: 'rgba(255, 99, 132, 1)',
-                    fill: false,
-                },
-            ]
-        };
-
-        if (chart) {
-            chart.destroy();
-        }
-
-        chart = new Chart(ctx, {
-            type: 'bar',
-            data: data,
-            options: {
-                responsive: true,
-                plugins: {
-                    tooltip: {
-                        mode: 'index',
-                        intersect: false,
-                    },
-                    legend: {
-                        display: true,
-                        position: 'top',
-                    }
-                },
-                scales: {
-                    x: {
-                        ticks: {
-                            color: 'black',
-                            font: {
-                                weight: 'bold',
-                                size: '16px',
-                            }
-                        },
-                        display: true,
-                        title: {
-                            display: true,
-                            text: 'Fédération',
-                            color: 'black',
-                            font: {
-                                size: 32,
-                                weight: 'bold',
-                            }
-                        }
-                    },
-                    y: {
-                        ticks: {
-                            color: 'black',
-                            font: {
-                                weight: 'bold',
-                                size: '16px',
-                            }
-                        },
-                        display: true,
-                        title: {
-                            display: true,
-                            text: 'Nombre de licenciés',
-                            color: 'black',
-                            font: {
-                                size: 32,
-                                weight: 'bold',
-                            }
-                        }
-                    }
-                }
+        options.series = [
+            {
+                name: 'Hommes',
+                data: dataForRegion.hommes.map((y, index) => ({ x: dataForRegion.labels[index], y })),
+            },
+            {
+                name: 'Femmes',
+                data: dataForRegion.femmes.map((y, index) => ({ x: dataForRegion.labels[index], y })),
+            },
+            {
+                name: 'Total',
+                data: totalLicenciesArray.map((y, index) => ({ x: dataForRegion.labels[index], y })),
             }
-        });
+        ];
+
+        if (typeof ApexCharts !== 'undefined') {
+            if (chart) {
+                chart.destroy();
+            }
+
+            chart = new ApexCharts(document.getElementById("licenciesChart"), options);
+            chart.render();
+        }
     }
 
     loadRegionData('0');
