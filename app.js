@@ -124,9 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
     franceOption.className = "cursor-pointer text-2xl font-bold text-black hover:text-blue-700";
 
     const franceImage = document.createElement('img');
-    franceImage.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAACWCAMAAAAfSh8xAAAAD1BMVEXOESb///8AJlR/kqnzxMlwvJaeAAAApUlEQVR4nO3PQREAIAgAMAT6ZzYEeOdja7DIuTpbOh4wNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0/GJ4AUOofWVeGcMdAAAAAElFTkSuQmCC';
+    franceImage.src = 'https://le-stock-americain.com/app/uploads/2021/09/drapeau-france.jpg';
     franceImage.alt = 'France';
-    franceImage.style.height = '60px';
+    franceImage.style.height = '133px';
     franceImage.style.width = '200px';
     franceImage.style.marginRight = '20px';
 
