@@ -243,4 +243,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadRegionData('0');
 });
-
