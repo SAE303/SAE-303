@@ -113,6 +113,11 @@ document.addEventListener('DOMContentLoaded', () => {
         
     ];
     const regionList = document.getElementById('region-list');
+    if (!regionList) {
+        console.error('Element with ID "region-list" not found');
+        return;
+    }
+
     const franceOption = document.createElement('li');
     franceOption.textContent = 'France';
     franceOption.className = "cursor-pointer text-2xl font-bold text-black hover:text-blue-700";
@@ -136,7 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
         regionList.appendChild(listItem);
     });
 
-    const ctx = document.getElementById('licenciesChart').getContext('2d');
     let chart;
 
     function loadRegionData(regionCode) {
@@ -144,6 +148,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!dataForRegion) {
             console.error(`Données manquantes pour la région avec code ${regionCode}`);
+            return;
+        }
+
+        const ctx = document.getElementById('licenciesChart');
+        if (!ctx) {
+            console.error('Element canvas not found');
             return;
         }
 
@@ -174,7 +184,13 @@ document.addEventListener('DOMContentLoaded', () => {
             chart.destroy();
         }
 
-        chart = new Chart(ctx, {
+        const ctx2d = ctx.getContext('2d');
+        if (!ctx2d) {
+            console.error('Failed to get 2D context');
+            return;
+        }
+
+        chart = new Chart(ctx2d, {
             type: 'bar',
             data: data,
             options: {
@@ -235,3 +251,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadRegionData('0');
 });
+
