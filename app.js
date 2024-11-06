@@ -112,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Monaco', code: '980' },
         
     ];
+
     const regionList = document.getElementById('region-list');
     if (!regionList) {
         console.error('Element with ID "region-list" not found');
@@ -251,4 +252,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadRegionData('0');
 });
-

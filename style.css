@@ -7,3 +7,14 @@ body {
     font-weight: bold;
     text-align: center;
 }
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
