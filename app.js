@@ -126,7 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
     franceOption.addEventListener('click', () => loadRegionData('0'));
 
     franceOption.prepend(franceImage);
-
     regionList.insertBefore(franceOption, regionList.firstChild);
 
     regions.forEach(region => {
@@ -143,7 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
     (async() => {
         const requete = await fetch("geo-top-5-sports-avec-plus-licencies-par-region-2023-france.geojson")
         const reponse = await requete.json()
-
         console.log(reponse)
     })()
 
@@ -155,6 +153,11 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        const totalLicencies = dataForRegion.hommes.reduce((a, b) => a + b, 0) + dataForRegion.femmes.reduce((a, b) => a + b, 0);
+        
+        const totalDiv = document.getElementById('totalLicencies');
+        totalDiv.textContent = `Total Licenciés: ${totalLicencies}`;
+        
         const data = {
             labels: dataForRegion.labels,
             datasets: [
@@ -237,5 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
     loadRegionData('0');
 });
+
