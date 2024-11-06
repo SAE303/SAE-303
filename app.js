@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     franceOption.className = "cursor-pointer text-2xl font-bold text-black hover:text-blue-700";
 
     const franceImage = document.createElement('img');
-    franceImage.src = 'https://le-stock-americain.com/app/uploads/2021/09/drapeau-france.jpg';
+    franceImage.src = 'https://media.cdnws.com/_i/4335/290/359/92/drapeau-france-2.png';
     franceImage.alt = 'France';
     franceImage.style.height = '133px';
     franceImage.style.width = '200px';
