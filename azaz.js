@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const ctx = document.getElementById('licenciesChart').getContext('2d');
     let chart;
     async function fetchRegions() {
-        const response = await fetch('data/regions.json');
+        const response = await fetch('regions.json');
         return await response.json();
     }       
     async function fetchCsvData(regionCode) {
