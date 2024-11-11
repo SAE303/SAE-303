@@ -3,22 +3,31 @@ document.addEventListener('DOMContentLoaded', async () => {
     const ctx = document.getElementById('licenciesChart').getContext('2d');
     let chart;
     async function fetchRegions() {
-        const response = await fetch('regions.json');
-        return await response.json();
-    }       
+        const response = await fetch('/data/regions.json');
+        const data = await response.json();
+        console.log("Régions chargées :", data);
+        return data;
+    }
+    (async() => {
+        const requete = await fetch("geo-top-5-sports-avec-plus-licencies-par-region-2023-france.geojson")
+        const reponse = await requete.json()
+
+        console.log(reponse)
+    })()         
     async function fetchCsvData(regionCode) {
         try {
-            const response = await fetch(`./data/${regionCode}.csv`);
+            const response = await fetch(`../data/${regionCode}.csv`);
             const data = await response.text();
             return parseCsv(data);
-        } catch (error) {
+        } 
+        catch (error) {
             console.error(`Erreur lors du chargement du fichier CSV pour la région ${regionCode}:`, error);
             return null;
         }
     }
     function parseCsv(data) {   
         const rows = data.split('\n');
-        const headers = rows[0].split(',');
+        const headers = rows[0].split(';');
 
         return rows.slice(1).map(row => {
             const values = row.split(',');
