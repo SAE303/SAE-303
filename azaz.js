@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const ctx = document.getElementById('licenciesChart').getContext('2d');
     let chart;
     async function fetchRegions() {
-        const response = await fetch('/SAE-303/regions.json');
+        const response = await fetch('/regions.json');
         const data = await response.json();
         console.log("Régions chargées :", data);
         return data;
