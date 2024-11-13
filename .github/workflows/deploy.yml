@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Remplacez par la branche de déploiement si différente
+      - main
 
 permissions:
   contents: write
@@ -12,11 +12,22 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
 
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Build site
+      run: # Insérez ici la commande pour générer votre site (ex : `npm run build` ou `jekyll build`)
+
+    - name: Upload to GitHub Pages
+      uses: actions/upload-artifact@v4
+      with:
+        name: github-pages
+        path: .../azaz.js  # Remplacez par le chemin de votre dossier de build
+
+    - name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        artifact_name: github-pages
