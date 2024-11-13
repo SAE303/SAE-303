@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     })()         
     async function fetchCsvData(regionCode) {
         try {
-            const response = await fetch(`/SAE-303/data/${regionCode}.csv`);
+            const response = await fetch(`/data/${regionCode}.csv`);
             const data = await response.text();
             return parseCsv(data);
         } 
