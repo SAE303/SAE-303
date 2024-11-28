@@ -3,28 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualisation des Licenciés par Région</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="app.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
-<body class="bg-gray-100">
-    <div class="flex">
-        <div class="w-1/5 p-4 bg-white shadow-lg">
-            <ul id="region-list" class="space-y-4">
-                <br><br><h2 class="titre">SÉLECTIONNEZ UNE RÉGION :</h2><br><br>
-            </ul>
-        </div>
-        <div class="w-4/5 p-2">
-            <canvas id="licenciesChart" width="400" height="200"></canvas>
-            <!-- Conteneur pour afficher le graphique des licenciés -->
-        </div>
+<body>
+    <header>
+        <a href="index.html">Accueil</a>
+        <a href="graphique.html">Graphique</a>
+        <a href="auteur.html">Auteur</a>
+    </header>
+    <div class="accueil-container">
+        <section class="logo-side">
+            <img src="img/football.png" alt="foot" class="logo">
+            <img src="img/basket.png" alt="basket"class="logo">
+            <img src="img/tennis.png" alt="tennis"class="logo">
+            <img src="img/equitation.png" alt="équitation"class="logo">
+            <img src="img/golf.png" alt="golf"class="logo">
+        </section>
+        <section class="txt">
+                <p>Bienvenue sur notre plateforme dédiée au sport et aux statistiques ! Explorez le nombre de licenciés par fédération sportive dans chaque région. Que vous soyez passionné de sport, étudiant, ou professionnel, notre outil vous offre une vue claire et détaillée des dynamiques sportives régionales en France. Découvrez comment le sport rassemble et évolue, région par région.</p>
+                <div class="btn">
+                    <a href="graphique.html">Voir Graphiques</a>
+                </div>
+        </section>
+        <section class="logo-side">
+                <img src="img/football.png" alt="foot" class="logo">
+                <img src="img/basket.png" alt="basket"class="logo">
+                <img src="img/tennis.png" alt="tennis"class="logo">
+                <img src="img/equitation.png" alt="équitation"class="logo">
+                <img src="img/golf.png" alt="golf"class="logo">
+        </section>
     </div>
     <footer>
-        <p class="footer">
-            Source données : <a href="https://injep.fr/donnee/recensement-des-licences-et-clubs-sportifs-2023/" target="_blank">https://injep.fr/donnee/recensement-des-licences-et-clubs-sportifs-2023/</a>
-        </p>
-    </footer>    
+            <img src="img/cy-couleur-rose.png" alt="">
+            <p class="foote">
+                <a href="https://injep.fr/donnee/recensement-des-licences-et-clubs-sportifs-2023/" target="_blank">Pour en savoir plus sur la source de nos données</a><strong>&copy;Hasson Oubaaous</strong>
+            </p>
+            <img src="img/cy-couleur.png" alt="">
+    </footer>
 </body>
 </html>

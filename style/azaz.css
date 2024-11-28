@@ -1,0 +1,276 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: gray 100;
+    color: #000000;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #1E3A8A, #3B82F6);
+    color: white;
+    height: 8vh;
+    width: auto;
+    border-bottom: 4px solid #3B82F6;
+}
+
+header a{
+    font-size: 2.5vw;
+    text-decoration: none;
+    margin-left: 7%;
+    margin-right: 7%;
+
+}
+
+header a:hover{
+    color: #3B82F6;
+}
+
+.flex {
+    display: flex;
+    height: 84vh;
+    width: 100%;
+}
+.titre {
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(to right, #1E3A8A, #3B82F6);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.title {
+    border: black solid;
+    border-radius: 3px;
+    width: 12vw;
+    height: 3vw;
+}
+
+
+footer{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(to right, #1E3A8A, #3B82F6);
+    color: #fff;
+    height: 8vh;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 5px solid #3B82F6;
+}
+
+footer p {
+    text-align: center;
+    font-size: 1.5vw;
+    color: #ffffff;
+    margin-top: 5px;
+    width: 75%; 
+}
+
+footer img {
+    width: 6vw;
+    height: 2.5vw;
+    margin-left: 3.75%;
+    margin-right: 3.75%;
+}
+
+footer a:hover{
+    color: #3B82F6  ;
+}
+.opt {
+    font-weight: bold;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+
+#regionSelector option {
+    font-size: 1vw;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#regionSelector option:hover {
+    background-color: #3B82F6;
+    color: #ffffff;
+}
+
+#licenciesChart {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.butt {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    padding: 15px;
+}
+.button-primary {
+    display: inline-block;
+    background-color: #1E3A8A;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    
+}
+
+.button-primary:hover {
+    background-color: #3B82F6;
+}
+
+.region-card {
+    max-width: 500px;
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.region-card-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1E3A8A;
+    margin-bottom: 10px;
+}
+
+.chart-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #1E3A8A;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3B82F6;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1E3A8A;
+}
+/* Styles pour les écrans de téléphone */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Ajuste la taille globale du texte */
+        padding: 10px; /* Réduit les marges globales */
+    }
+
+    header {
+        flex-direction: row; /* Empile les éléments */
+        height: auto; /* Ajuste la hauteur */
+        text-align: center; /* Centre le contenu */
+    }
+
+    header a {
+        font-size: 4vw; /* Texte plus petit pour les liens */
+        margin: 5px 0; /* Réduit l'espacement vertical */
+    }
+
+    .flex {
+        flex-direction: row; /* Empile les éléments */
+        height: auto; /* Ajuste la hauteur */
+    }
+
+    .titre {
+        font-size: 3.5vw; /* Réduit la taille du titre */
+        padding: 10px; /* Ajuste l'espacement */
+    }
+
+    .title {
+        width: 30vw; /* Augmente la largeur relative */
+        height: 8vw; /* Ajuste la hauteur */
+    }
+
+    .end {
+        flex-direction: row; /* Empile les éléments */
+        height: auto; /* Ajuste la hauteur */
+        padding: 10px; /* Réduit les marges */
+        text-align: center; /* Centre le contenu */
+    }
+
+    .end p {
+        font-size: 3.5vw; /* Texte plus petit */
+        margin-top: 10px; /* Réduit l'espace en haut */
+    }
+
+    .end img {
+        width: 12vw; /* Réduit la taille des images */
+        height: auto; /* Conserve les proportions */
+        margin: 5px 0; /* Espacement vertical réduit */
+    }
+
+    .butt {
+        font-size: 18px; /* Taille de bouton réduite */
+        padding: 10px; /* Ajuste l'espacement interne */
+    }
+
+    .button-primary {
+        padding: 8px 15px; /* Boutons plus petits */
+        font-size: 16px; /* Ajuste la taille du texte */
+    }
+
+    .region-card {
+        max-width: 90%; /* Réduit la largeur */
+        margin: 10px auto; /* Centré avec marges réduites */
+        padding: 15px; /* Réduit l'espacement interne */
+    }
+
+    .region-card-title {
+        font-size: 18px; /* Texte plus petit */
+    }
+
+    .chart-container {
+        padding: 10px; /* Réduit l'espacement interne */
+    }
+
+    .chart-title {
+        font-size: 18px; /* Réduit la taille du titre */
+    }
+
+    #licenciesChart {
+        padding: 10px; /* Réduit l'espacement interne */
+    }
+
+    .footer p {
+        font-size: 12px; /* Texte plus petit dans le footer */
+    }
+}
+
