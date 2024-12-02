@@ -32,8 +32,8 @@ header a:hover{
 h1 {
     display: flex;
     justify-content: center;
-    margin-top: 2vh;
-    font-size: 3vw;
+    margin-top: 2vh !important;
+    font-size: 3vw !important;
     height: 5vh;
 }
 .auteurs-container {
