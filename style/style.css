@@ -66,8 +66,8 @@ header a:hover{
 }
 
 h1 {
-    font-size: 2vw;
-    font-weight: bold;
+    font-size: 2vw !important;
+    font-weight: bold !important;
 }
 
 .txt p {
