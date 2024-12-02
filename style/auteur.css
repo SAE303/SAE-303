@@ -29,7 +29,13 @@ header a{
 header a:hover{
     color: #3B82F6;
 }
-
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    font-size: 3vw;
+    height: 5vh;
+}
 .auteurs-container {
     display: flex;
     flex-wrap: wrap;
@@ -37,7 +43,7 @@ header a:hover{
     align-items: center;
     gap: 30px;
     padding: 50px;
-    height: 84vh;
+    height: 77vh;
     box-sizing: border-box;
 }
 
