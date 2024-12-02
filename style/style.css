@@ -59,11 +59,20 @@ header a:hover{
 .txt {
     text-align: center;
     flex: 2;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     color: #000000;
     max-width: 600px;
     margin: 0 auto;
+}
+
+h1 {
+    font-size: 2vw;
     font-weight: bold;
+}
+
+.txt p {
+    text-align: left;
+    margin-top: 5vh;
 }
 
 .btn {
